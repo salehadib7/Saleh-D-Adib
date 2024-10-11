@@ -16,7 +16,7 @@ const Skils = () => {
 
   useEffect(() => {
     setActiveMenu("skils");
-  }, [isInView]);
+  }, [isInView, setActiveMenu]);
 
   return (
     <div

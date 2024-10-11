@@ -25,7 +25,7 @@ const Hero = () => {
 
   useEffect(() => {
     setActiveMenu("home")
-  }, [isInView])
+  }, [isInView, setActiveMenu])
 
 
   return (

@@ -51,7 +51,7 @@ const Single = ({ title, desc, img, link }) => {
 
   useEffect(() => {
     setActiveMenu("portfolio")
-  }, [isInView])
+  }, [isInView, setActiveMenu])
 
 
   return (

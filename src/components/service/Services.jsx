@@ -19,7 +19,7 @@ const Services = () => {
 
   useEffect(() => {
     setActiveMenu("services")
-  }, [isInView])
+  }, [isInView, setActiveMenu])
   
 
 

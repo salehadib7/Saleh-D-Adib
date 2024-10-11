@@ -31,7 +31,7 @@ const About = () => {
 
   useEffect(() => {
     setActiveMenu("about")
-  }, [isInView])
+  }, [isInView, setActiveMenu])
   
 
 

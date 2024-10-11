@@ -17,7 +17,7 @@ const Education = () => {
 
   useEffect(() => {
     setActiveMenu("education")
-  }, [isInView])
+  }, [isInView, setActiveMenu])
 
 
   return (
