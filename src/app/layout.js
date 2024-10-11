@@ -1,12 +1,9 @@
 
 
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import "./globals.css";
 
 import { Poppins, Outfit } from "next/font/google";
-import { MotionProvider } from "@/context/Motioncontext";
-import { MenuProvider } from "@/context/MenuContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,14 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <MotionProvider>
-        <MenuProvider>
+
         <body className={`${poppins.variable} ${outfit.variable}`}>
           {children}
-          <ToastContainer theme="dark" position="bottom-right" />
         </body>
-        </MenuProvider>
-      </MotionProvider>
+
+
     </html>
   );
 }

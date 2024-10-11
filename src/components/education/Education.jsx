@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useMotion } from "@/context/Motioncontext";
 
 import EduCard from "../eduCard.jsx/EduCard";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 import { useContext, useRef, useEffect } from "react";
 
 

@@ -13,7 +13,7 @@ import {
   faMap,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 
 const Sidebar = () => {

@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useContext } from "react";
 import emailjs from "emailjs-com";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 const Contact = () => {
   const ref = useRef();
@@ -202,10 +202,11 @@ const Contact = () => {
                 placeholder={errors.email ? errors.email : "Your email"}
                 name="email"
                 value={formData.email}
+                onChange={()=>{}}
                 required
               />
               <textarea
-                className=" outline-none border-none p-2 w-[95%] bg-softBackground"
+                className=" outline-none border-none p-2 w-[95%] bg-softBackground" 
                 rows="5"
                 placeholder={errors.message ? errors.message : "Your message"}
                 name="message"

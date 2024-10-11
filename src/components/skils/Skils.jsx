@@ -4,7 +4,7 @@ import { useMotion } from "@/context/Motioncontext";
 import ProgressBar from "../progressBar/ProgressBar";
 import { motion, useInView } from "framer-motion";
 import { useContext, useRef, useEffect } from "react";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 const Skils = () => {
   const { motionVariants } = useMotion();

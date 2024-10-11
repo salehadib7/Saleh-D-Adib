@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 const MenuContext = createContext();
 
@@ -16,4 +16,4 @@ export const MenuProvider = ({ children }) => {
   );
 };
 
-export default MenuContext;
+export default MenuContext

@@ -6,7 +6,7 @@ import { useContext, useRef, useEffect } from "react";
 
 import ServiceCard from "../serviceCard/ServiceCard";
 import { allServices } from "./allService";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 
 const Services = () => {

@@ -1,3 +1,11 @@
+"use client"
+
+import { MotionProvider } from "@/context/Motioncontext";
+import { MenuProvider } from "@/context/Menucontext";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import About from "@/components/about/About";
 import Banner from "@/components/banner/Banner";
 import Bganimation from "@/components/bganimation/Bganimation";
@@ -16,6 +24,8 @@ import Skils from "@/components/skils/Skils";
 export default function Home() {
   return (
     <>
+          <MotionProvider>
+          <MenuProvider>
       <div className="mx-auto flex font-poppins">
         <Cursor />
         <Sidebar />
@@ -32,8 +42,11 @@ export default function Home() {
           <Contact />
           <Footer />
           <Bganimation/>
+          <ToastContainer theme="dark" position="bottom-right" />
         </div>
       </div>
+      </MenuProvider>
+      </MotionProvider>
     </>
   );
 }

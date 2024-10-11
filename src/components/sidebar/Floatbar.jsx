@@ -14,7 +14,7 @@ import {
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 import Toggle from "./togglebutton/Toggle";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 const Floatbar = () => {
 

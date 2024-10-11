@@ -5,7 +5,7 @@ import { useMotion } from "@/context/Motioncontext";
 import Portfoliocard from "../portfoliocard/Portfoliocard";
 import { useRef, useEffect, useContext } from "react";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 
 const featuredWorks = [

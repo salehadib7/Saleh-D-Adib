@@ -2,7 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useMotion } from "@/context/Motioncontext";
 import { useContext, useRef, useEffect } from "react";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 
 import Image from "next/image"
@@ -46,7 +46,7 @@ const Hero = () => {
           height={700}
           width={700}
           alt="Saleh D. Adib"
-        
+          priority
         />
       </motion.div>
 

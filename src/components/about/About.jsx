@@ -10,7 +10,7 @@ import {
   faLaptopCode
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useRef, useEffect } from "react";
-import MenuContext from "@/context/MenuContext";
+import MenuContext from "@/context/Menucontext";
 
 
 
