@@ -90,7 +90,7 @@ const Contact = () => {
 
   useEffect(() => {
     setActiveMenu("contact")
-  }, [ifInView])
+  }, [ifInView, setActiveMenu])
 
 
 
