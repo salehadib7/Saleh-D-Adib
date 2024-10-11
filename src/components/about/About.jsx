@@ -42,13 +42,13 @@ const About = () => {
       <motion.h3 variants={motionVariants} initial="leftInitial" whileInView="animate" className=" text-xl md:text-2xl lg:text-3xl font-outfit font-bold">About me</motion.h3>
       <motion.h1 variants={motionVariants} initial="rightInitial" whileInView="animate" className=" py-4 text-2xl md:text-3xl lg:text-4xl font-outfit font-semibold">Who I am?</motion.h1>
       <motion.p variants={motionVariants} initial="leftInitial" whileInView="animate" className=" text-xs md:text-sm lg:text-base font-poppins leading-5 md:leading-7 tracking-wide capitalize">
-        Currently I'm a student at Bangabandhu Sheikh Mujibur Rahman Science And
+        Currently I&apos;m a student at Bangabandhu Sheikh Mujibur Rahman Science And
         Technology University at the department of English. Beside that formal
-        introduction I'm a <span className=" border-[1px] border-l-0 border-r-0 border-white bg-softTheme">
+        introduction I&apos;m a <span className=" border-[1px] border-l-0 border-r-0 border-white bg-softTheme">
          Full Stack Web Developer, ui/ux designer A Script Writer, An Stage
         Show Actor, A Debater, A Formar Scout, A Decent Story Writer, A Speaker
-        </span> and so on. There are so many things I couldn't even count. I just try
-        everything sometimes I do great things and sometimes I fail but it's my
+        </span> and so on. There are so many things I couldn&apos;t even count. I just try
+        everything sometimes I do great things and sometimes I fail but it&apos;s my
         way of life.
       </motion.p>
       <div className=" flex flex-col md:flex-row justify-between items-center w-full pt-10 flex-wrap">

@@ -108,7 +108,7 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-start ">
           <div className=" flex-1">
             <motion.h1 variants={motionVariants} initial="leftInitial" whileInView="animate" className="text-3xl lg:text-4xl font-bold pb-10">
-              Let's discuss your project
+              Let&apos;s discuss your project
             </motion.h1>
             <div className=" flex flex-col justify-center items-start gap-10">
               <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className="flex justify-start items-center gap-2">
@@ -145,7 +145,7 @@ const Contact = () => {
           </div>
           <div className="relative flex-1">
             <motion.p variants={motionVariants} initial="rightInitial" whileInView="animate" className=" pb-5">
-              <b className="text-2xl font-medium">What's your story?</b> Get in
+              <b className="text-2xl font-medium">What&apos;s your story?</b> Get in
               touch. Always available for freelancing if the right project comes
               along
             </motion.p>
