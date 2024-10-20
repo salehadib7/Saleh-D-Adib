@@ -86,7 +86,7 @@ const Contact = () => {
   const { setActiveMenu} = useContext(MenuContext)
 
 
-  const ifInView = useInView(ref, {amount: 0.8})
+  const ifInView = useInView(ref, {amount: 0.7})
 
   useEffect(() => {
     setActiveMenu("contact")
