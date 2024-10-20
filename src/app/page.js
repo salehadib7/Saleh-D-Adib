@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { MotionProvider } from "@/context/Motioncontext";
 import { MenuProvider } from "@/context/Menucontext";
@@ -24,28 +24,28 @@ import Skils from "@/components/skils/Skils";
 export default function Home() {
   return (
     <>
-          <MotionProvider>
-          <MenuProvider>
-      <div className="mx-auto flex font-poppins">
-        <Cursor />
-        <Sidebar />
-        <Floatbar />
-        <div className="md:w-[100%] lg:w-[75%] relative">
-          <Hero />
-          <About />
-          <Banner />
-          <Services />
-          <CounterBanner />
-          <Skils />
-          <Education />
-          <Portfolio />
-          <Contact />
-          <Footer />
-          <Bganimation/>
-          <ToastContainer theme="dark" position="bottom-right" />
-        </div>
-      </div>
-      </MenuProvider>
+      <MotionProvider>
+        <MenuProvider>
+          <div className= " w-full mx-auto flex font-poppins">
+            <Cursor />
+            <Sidebar />
+            <Floatbar />
+            <div className=" w-[100%] lg:w-[75%] relative overflow-clip">
+              <Hero />
+              <About />
+              <Banner />
+              <Services />
+              <CounterBanner />
+              <Skils />
+              <Education />
+              <Portfolio />
+              <Contact />
+              <Footer />
+              <Bganimation />
+              <ToastContainer theme="dark" position="bottom-right" />
+            </div>
+          </div>
+        </MenuProvider>
       </MotionProvider>
     </>
   );

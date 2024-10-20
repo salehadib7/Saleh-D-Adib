@@ -10,6 +10,10 @@ const motionVariants = {
         opacity: 0,
         x: -200
     },
+    leftMobileInitial:{
+      opacity: 0,
+      x: -100
+  },
 
     rightInitial:{
         opacity: 0,

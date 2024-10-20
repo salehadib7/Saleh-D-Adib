@@ -38,7 +38,7 @@ const About = () => {
 
 
   return (
-    <div ref={ref} id="about" className=" min-h-screen flex flex-col justify-start items-start py-10 md:px-14 px-8">
+    <div ref={ref} id="about" className=" min-h-screen flex flex-col justify-start items-start py-3 lg:py-10 md:px-14 px-8">
       <motion.h3 variants={motionVariants} initial="leftInitial" whileInView="animate" className=" text-xl md:text-2xl lg:text-3xl font-outfit font-bold">About me</motion.h3>
       <motion.h1 variants={motionVariants} initial="rightInitial" whileInView="animate" className=" py-4 text-2xl md:text-3xl lg:text-4xl font-outfit font-semibold">Who I am?</motion.h1>
       <motion.p variants={motionVariants} initial="leftInitial" whileInView="animate" className=" text-xs md:text-sm lg:text-base font-poppins leading-5 md:leading-7 tracking-wide capitalize">

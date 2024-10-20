@@ -22,7 +22,7 @@ const Skils = () => {
     <div
 
       id="skils"
-      className=" min-h-screen md:px-14 px-8 flex justify-center items-center"
+      className=" h-auto py-24 lg:min-h-screen md:px-14 px-8 flex justify-center items-center"
     >
       <div ref={ref}>
         <motion.h3

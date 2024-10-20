@@ -34,7 +34,7 @@ const Sidebar = () => {
       variants={motionVariants}
       initial="leftInitial"
       whileInView="animate"
-      className=" hidden lg:flex justify-center items-center lg:w-[25%] sticky top-0 bg-softBackground h-screen border-r-4 border-softTheme"
+      className=" hidden lg:flex justify-center items-center w-[25%] sticky top-0 bg-softBackground h-screen border-r-4 border-softTheme"
     >
       <div className=" flex flex-col items-center">
         <div className=" pb-5">

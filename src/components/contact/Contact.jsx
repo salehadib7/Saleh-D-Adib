@@ -185,6 +185,7 @@ const Contact = () => {
               initial={{opacity: 0}}
               whileInView={{opacity: 1}}
               transition={{ delay: 4, duration: 1 }}
+              viewport={{once: false}}
               className=" flex flex-col justify-center items-start gap-4"
               onChange={handleChange}
               ref={formRef}

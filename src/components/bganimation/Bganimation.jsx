@@ -1,16 +1,10 @@
 "use client"
-import { animate, easeIn, easeInOut, mirrorEasing, motion } from "framer-motion"
+import { easeIn, motion } from "framer-motion"
 
 const Bganimation = () => {
 
-    const variants = {
-        initial : { opacity : "0", scale: "0"},
-        animate : { opacity : "1", scale: "1.3", transition: {duration: 5, easeIn} }
-    }
-
-
   return (
-    <motion.div className=" h-screen fixed w-full lg:w-[75%] z-[-1] top-0 right-0 ">
+    <motion.div className=" w-full h-screen fixed lg:w-[75%] z-[-1] top-0 left-0 lg:left-auto lg:right-0 ">
         <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity:0.8, scale: 1.2, rotate: 360, transition:{ duration:4, ease: easeIn, repeat: Infinity, repeatType: "mirror"}}} className=" md:h-14 md:w-14 w-7 h-7 lg:h-20 lg:w-20 border-softTheme border-2 lg:border-4 bg-transparent absolute top-[20%] left-[49%]"></motion.div>
         <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity:0.3, scale: 1.2, rotate: 360, transition:{ duration:8, ease: easeIn, repeat: Infinity, repeatType: "mirror"}}} className=" md:h-14 md:w-14 w-7 h-7 lg:h-20 lg:w-20 border-softTheme border-2 lg:border-4 bg-transparent absolute top-[12%] left-[82%]"></motion.div>
         <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity:0.5, scale: 1.2, rotate: 360, transition:{ duration:9, ease: easeIn, repeat: Infinity, repeatType: "mirror"}}} className=" md:h-14 md:w-14 w-7 h-7 lg:h-20 lg:w-20 border-softTheme border-2 lg:border-4 bg-transparent absolute top-[47%] left-[2%]"></motion.div>

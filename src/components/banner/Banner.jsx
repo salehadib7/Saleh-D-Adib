@@ -12,7 +12,7 @@ const Banner = () => {
   return (
     <div className=" bg-theme md:px-14 px-8 py-5 flex justify-between items-center">
       <div className=" w-[50%] md:w-[60%]">
-        <motion.h3 variants={motionVariants} initial="leftInitial" whileInView="animate" className=" text-xl md:text-2xl lg:text-3xl">
+        <motion.h3 variants={motionVariants} initial="leftMobileInitial" whileInView="animate" className=" text-xl md:text-2xl lg:text-3xl">
           I am happy to let you know that 100+ projects have been done
           sucessfully!
         </motion.h3>

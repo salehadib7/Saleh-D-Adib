@@ -47,7 +47,7 @@ const Single = ({ title, desc, img, link }) => {
   const ref = useRef()
 
 
-  const isInView = useInView(ref, {amount: 0.5})
+  const isInView = useInView(ref, {amount: 0.7})
 
   useEffect(() => {
     setActiveMenu("portfolio")
@@ -55,7 +55,7 @@ const Single = ({ title, desc, img, link }) => {
 
 
   return (
-    <div ref={ref} className=" md:px-14 px-8 min-h-screen flex justify-center items-center">
+    <div ref={ref} className=" md:px-14 px-8 lg:min-h-screen min-h-auto flex justify-center items-center">
       <div className=" py-12 text-white flex flex-col items-start lg:flex-row justify-between lg:items-center gap-5">
         <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate">
             <Portfoliocard img={img} />
