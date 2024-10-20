@@ -47,7 +47,7 @@ const Single = ({ title, desc, img, link }) => {
   const ref = useRef()
 
 
-  const isInView = useInView(ref, {amount: 0.7})
+  const isInView = useInView(ref, {amount: 0.2})
 
   useEffect(() => {
     setActiveMenu("portfolio")
