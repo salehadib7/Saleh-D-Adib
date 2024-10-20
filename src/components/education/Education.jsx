@@ -13,7 +13,7 @@ const Education = () => {
 
   const ref = useRef(null)
 
-  const isInView = useInView(ref, {amount: 0.5})
+  const isInView = useInView(ref, {amount: 0.7})
 
   useEffect(() => {
     setActiveMenu("education")

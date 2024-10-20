@@ -21,7 +21,7 @@ const Hero = () => {
 
   const ref = useRef(null)
 
-  const isInView = useInView(ref, {amount: 0.6})
+  const isInView = useInView(ref, {amount: 0.8})
 
   useEffect(() => {
     setActiveMenu("home")

@@ -38,7 +38,7 @@ const Floatbar = () => {
     },
   };
 
-  const {activeMenu} = useContext(MenuContext)
+  const {activeMenu, setActiveMenu} = useContext(MenuContext)
 
   return (
    
@@ -76,6 +76,7 @@ const Floatbar = () => {
             href="#home"
             className=" flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "home" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("home")}}
           >
             <FontAwesomeIcon icon={faHouse} className="h-6" />
             <h3 className="text-md font-semibold">Home</h3>
@@ -85,6 +86,7 @@ const Floatbar = () => {
             href="#about"
             className="flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "about" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("about")}}
           >
             <FontAwesomeIcon icon={faAddressCard} className="h-6" />
             <h3 className="text-md font-semibold">About</h3>
@@ -94,6 +96,7 @@ const Floatbar = () => {
             href="#services"
             className="flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "services" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("services")}}
           >
             <FontAwesomeIcon icon={faLaptopFile} className="h-6" />
             <h3 className="text-md font-semibold">Services</h3>
@@ -103,6 +106,7 @@ const Floatbar = () => {
             href="#skils"
             className="flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "skils" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("skills")}}
           >
             <FontAwesomeIcon icon={faScrewdriverWrench} className="h-6" />
             <h3 className="text-md font-semibold">Skils</h3>
@@ -112,6 +116,7 @@ const Floatbar = () => {
             href="#education"
             className="flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "education" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("education")}}
           >
             <FontAwesomeIcon icon={faGraduationCap} className="h-6" />
             <h3 className="text-md font-semibold">Education</h3>
@@ -121,6 +126,7 @@ const Floatbar = () => {
             href="#portfolio"
             className="flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "portfolio" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("portfolio")}}
           >
             <FontAwesomeIcon icon={faMap} className="h-6" />
             <h3 className="text-md font-semibold">Portfolio</h3>
@@ -130,6 +136,7 @@ const Floatbar = () => {
             href="#contact"
             className="flex justify-start items-center gap-4 transition"
             style={{ color : activeMenu === "contact" ? "#008170" : "white"}}
+            onClick={()=>{setActiveMenu("contact")}}
           >
             <FontAwesomeIcon icon={faPhoneVolume} className="h-6" />
             <h3 className="text-md font-semibold">Contact</h3>
