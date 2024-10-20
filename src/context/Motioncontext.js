@@ -8,7 +8,7 @@ const motionVariants = {
 
     leftInitial:{
         opacity: 0,
-        x: -200
+        x: -100
     },
     leftMobileInitial:{
       opacity: 0,
@@ -17,12 +17,12 @@ const motionVariants = {
 
     rightInitial:{
         opacity: 0,
-        x: 200
+        x: 100
     },
 
     upInitial:{
         opacity: 0,
-        y: -200
+        y: -100
     },
 
     animate:{
