@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #021526;
   --softBg: #232d3f;
   --theme: #005b41;
   --softTheme: #008170;
-  --toastify-color-success: #008170;
 }
 
 body {

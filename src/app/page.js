@@ -42,7 +42,7 @@ export default function Home() {
               <Contact />
               <Footer />
               <Bganimation />
-              <ToastContainer theme="dark" position="bottom-right" />
+              <ToastContainer theme="dark" position="top-right" />
             </div>
           </div>
         </MenuProvider>

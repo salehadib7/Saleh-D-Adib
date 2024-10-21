@@ -1,6 +1,8 @@
 "use client"
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useMotion } from "@/context/Motioncontext";
+import { useRef, useEffect, useContext } from "react";
+import MenuContext from "@/context/Menucontext";
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,8 +15,22 @@ import {
 
 const Footer = () => {
   const { motionVariants } = useMotion();
+  const ref = useRef()
+
+  const { setActiveMenu} = useContext(MenuContext)
+
+  const ifInView = useInView(ref, {amount: 0.2})
+
+  useEffect(() => {
+    setActiveMenu("contact")
+  }, [ifInView, setActiveMenu])
+
+
+
+
+
   return (
-    <div className=" px-5 h-auto w-full bg-gray-900">
+    <div ref={ref} className=" px-5 h-auto w-full bg-gray-900">
       <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className=" flex justify-center items-center gap-4 pt-10">
         <div className=" h-8 w-8 rounded-[50%] flex justify-center items-center bg-white text-background">
           <a href="https://www.facebook.com/God.D.Adib" target="_blank">

@@ -70,7 +70,7 @@ const Contact = () => {
     try {
       const email = await emailjs.send(serviceID, templateID, formData, userID);
       if (email.status === 200) {
-        toast.success("Email sent successfully!");
+        toast.success("Email sent successfully!", {icon: false, progressStyle:{background: "#008170"}, style:{background: "#232d3f"}});
       } else {
         toast.error("There is an error sending your message!!");
       }
@@ -86,7 +86,7 @@ const Contact = () => {
   const { setActiveMenu} = useContext(MenuContext)
 
 
-  const ifInView = useInView(ref, {amount: 0.7})
+  const ifInView = useInView(ref, {amount: 0.8})
 
   useEffect(() => {
     setActiveMenu("contact")
