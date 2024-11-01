@@ -1,6 +1,5 @@
 "use client"
 import { motion, useInView } from "framer-motion";
-import { useMotion } from "@/context/Motioncontext";
 import { useRef, useEffect, useContext } from "react";
 import MenuContext from "@/context/Menucontext";
 
@@ -12,9 +11,10 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { fadeIn } from "@/motion/motions";
 
 const Footer = () => {
-  const { motionVariants } = useMotion();
+
   const ref = useRef()
 
   const { setActiveMenu} = useContext(MenuContext)
@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <div ref={ref} className=" px-5 h-auto w-full bg-gray-900">
-      <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className=" flex justify-center items-center gap-4 pt-10">
+      <motion.div variants={fadeIn("left", "tween", 0.3, 0.5)} initial="hidden" whileInView="show" className=" flex justify-center items-center gap-4 pt-10">
         <div className=" h-8 w-8 rounded-[50%] flex justify-center items-center bg-white text-background">
           <a href="https://www.facebook.com/God.D.Adib" target="_blank">
           <FontAwesomeIcon className="" icon={faFacebook} />
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={motionVariants} initial="rightInitial" whileInView="animate" className="text-center pt-5 pb-10 text-sm font-medium">
+      <motion.div variants={fadeIn("right", "tween", 0.5, 0.5)} initial="hidden" whileInView="show" className="text-center pt-5 pb-10 text-sm font-medium">
         © Copyright ©2024 All rights reserved ||{" "}
         <a href="https://www.facebook.com/God.D.Adib" target="_blank">
           <span className=" font-bold text-softTheme">Saleh D. Adib</span>

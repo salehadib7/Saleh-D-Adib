@@ -1,6 +1,5 @@
 "use client";
 
-import { MotionProvider } from "@/context/Motioncontext";
 import { MenuProvider } from "@/context/Menucontext";
 
 import { ToastContainer } from "react-toastify";
@@ -24,7 +23,6 @@ import Skils from "@/components/skils/Skils";
 export default function Home() {
   return (
     <>
-      <MotionProvider>
         <MenuProvider>
           <div className= " w-full mx-auto flex font-poppins">
             <Cursor />
@@ -46,7 +44,6 @@ export default function Home() {
             </div>
           </div>
         </MenuProvider>
-      </MotionProvider>
     </>
   );
 }

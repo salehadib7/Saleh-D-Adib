@@ -1,13 +1,13 @@
 "use client";
 
-import { useMotion } from "@/context/Motioncontext";
+
 import ProgressBar from "../progressBar/ProgressBar";
 import { motion, useInView } from "framer-motion";
 import { useContext, useRef, useEffect } from "react";
 import MenuContext from "@/context/Menucontext";
+import { fadeIn } from "@/motion/motions";
 
 const Skils = () => {
-  const { motionVariants } = useMotion();
   const { setActiveMenu } = useContext(MenuContext);
 
   const ref = useRef(null);
@@ -22,29 +22,23 @@ const Skils = () => {
     <div
 
       id="skils"
-      className=" h-auto py-24 lg:min-h-screen md:px-14 px-8 flex justify-center items-center"
+      className=" h-auto pb-14 lg:min-h-screen md:px-14 px-8 flex justify-center items-center"
     >
       <div ref={ref}>
         <motion.h3
-          variants={motionVariants}
-          initial="leftInitial"
-          whileInView="animate"
+          variants={fadeIn("left", "tween", 0.5, 0.5)} initial="hidden" whileInView="show"
           className=" md:text-lg text-base lg:text-xl font-bold"
         >
           My Speciality
         </motion.h3>
         <motion.h1
-          variants={motionVariants}
-          initial="rightInitial"
-          whileInView="animate"
+          variants={fadeIn("right", "tween", 0.5, 0.5)} initial="hidden" whileInView="show"
           className=" md:text-3xl text-2xl lg:text-4xl font-bold pt-4 md:pb-10 pb-5 lg:pb-16"
         >
           My Skils
         </motion.h1>
         <motion.p
-          variants={motionVariants}
-          initial="leftInitial"
-          whileInView="animate"
+          variants={fadeIn("left", "tween", 0.5, 0.5)} initial="hidden" whileInView="show"
           className=" text-xs md:text-sm text-gray-400 w-[90%]"
         >
           A highly skilled MERN stack web developer with expertise in WordPress

@@ -1,14 +1,15 @@
 "use client"
+import { fadeIn } from "@/motion/motions";
 import { motion } from "framer-motion";
-import { useMotion } from "@/context/Motioncontext";
+
 
 
 const ProgressBar = ({percentage, color}) => {
-  const { motionVariants } = useMotion();
+;
   return (
     <div>
 
-        <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className=" h-2 w-full bg-softBackground rounded-full">
+        <motion.div variants={fadeIn("right", "tween", 0.5, 0.5)} initial="hidden" whileInView="show" className=" h-2 w-full bg-softBackground rounded-full">
             <motion.div initial={{width: 0}} whileInView={{width: `${percentage}%` , transition:{ duration: 1}}} style={{ backgroundColor: `${color}`}} className="relative h-full rounded-full">
                 <div style={{backgroundColor: `${color}`}} className=" absolute right-0 h-4 w-4 rounded-full top-[50%] translate-y-[-50%]">
                 </div>

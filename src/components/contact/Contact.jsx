@@ -1,6 +1,5 @@
 "use client";
 
-import { useMotion } from "@/context/Motioncontext";
 
 import Image from "next/image";
 import { toast } from "react-toastify";
@@ -8,6 +7,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useContext } from "react";
 import emailjs from "emailjs-com";
 import MenuContext from "@/context/Menucontext";
+import { fadeIn } from "@/motion/motions";
 
 const Contact = () => {
   const ref = useRef();
@@ -82,7 +82,6 @@ const Contact = () => {
 
   };
 
-  const { motionVariants } = useMotion();
   const { setActiveMenu} = useContext(MenuContext)
 
 
@@ -102,16 +101,16 @@ const Contact = () => {
       ref={ref}
     >
       <div>
-        <motion.h1 variants={motionVariants} initial="upInitial" whileInView="animate" className=" text-center pb-14 text-2xl md:text-3xl lg:text-4xl font-bold">
+        <motion.h1 variants={fadeIn("up", "tween", 0.5, 0.5)} initial="hidden" whileInView="show" className=" text-center pb-14 text-2xl md:text-3xl lg:text-4xl font-bold">
           Contact Me
         </motion.h1>
         <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-start ">
           <div className=" flex-1">
-            <motion.h1 variants={motionVariants} initial="leftInitial" whileInView="animate" className="text-3xl lg:text-4xl font-bold pb-10">
+            <motion.h1 variants={fadeIn("right", "tween", 0.1, 0.5)} initial="hidden" whileInView="show" className="text-3xl lg:text-4xl font-bold pb-10">
               Let&apos;s discuss your project
             </motion.h1>
             <div className=" flex flex-col justify-center items-start gap-10">
-              <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className="flex justify-start items-center gap-2">
+              <motion.div variants={fadeIn("right", "tween", 0.3, 0.5)} initial="hidden" whileInView="show" className="flex justify-start items-center gap-2">
                 <Image
                   src="/phone.png"
                   width={500}
@@ -121,7 +120,7 @@ const Contact = () => {
                 />
                 +880 1317 136 420
               </motion.div>
-              <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className="flex justify-start items-center gap-2">
+              <motion.div variants={fadeIn("right", "tween", 0.5, 0.5)} initial="hidden" whileInView="show" className="flex justify-start items-center gap-2">
                 <Image
                   className="icon"
                   src="/email.png"
@@ -131,7 +130,7 @@ const Contact = () => {
                 />
                 salehadib007@gmail.com
               </motion.div>
-              <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate" className="flex justify-start items-center gap-2">
+              <motion.div variants={fadeIn("right", "tween", 0.7, 0.5)} initial="hidden" whileInView="show" className="flex justify-start items-center gap-2">
                 <Image
                   className="icon"
                   src="/address.png"
@@ -144,7 +143,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="relative flex-1">
-            <motion.p variants={motionVariants} initial="rightInitial" whileInView="animate" className=" pb-5">
+            <motion.p variants={fadeIn("left", "tween", 0.5, 0.5)} initial="hidden" whileInView="show" className=" pb-5">
               <b className="text-2xl font-medium">What&apos;s your story?</b> Get in
               touch. Always available for freelancing if the right project comes
               along

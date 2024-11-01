@@ -1,11 +1,12 @@
 "use client";
-import { useMotion } from "@/context/Motioncontext";
+
 
 
 import Portfoliocard from "../portfoliocard/Portfoliocard";
 import { useRef, useEffect, useContext } from "react";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
 import MenuContext from "@/context/Menucontext";
+import { fadeIn } from "@/motion/motions";
 
 
 const featuredWorks = [
@@ -20,7 +21,7 @@ const featuredWorks = [
     id: 2,
     title: "Ecommerce Website",
     img: "/ecommerce.png",
-    desc: "When everyone worldwide is moving their businesses online, an E-commerce website is a must-have",
+    desc: "In a era of online business, an E-commerce website is a must-have",
     link: "https://nextstylefashion.free.nf/"
   },
   {
@@ -41,7 +42,6 @@ const featuredWorks = [
 
 const Single = ({ title, desc, img, link }) => {
 
-  const { motionVariants } = useMotion();
   const { setActiveMenu} = useContext(MenuContext)
 
   const ref = useRef()
@@ -55,19 +55,19 @@ const Single = ({ title, desc, img, link }) => {
 
 
   return (
-    <div ref={ref} className=" md:px-14 px-8 lg:min-h-screen min-h-auto flex justify-center items-center">
+    <div ref={ref} className=" md:px-14 px-8 lg:min-h-screen h-auto flex justify-normal items-center">
       <div className=" py-12 text-white flex flex-col items-start lg:flex-row justify-between lg:items-center gap-5">
-        <motion.div variants={motionVariants} initial="leftInitial" whileInView="animate">
+        <motion.div variants={fadeIn("right", "tween", 0, 0.5)} initial="hidden" whileInView="show">
             <Portfoliocard img={img} />
         </motion.div>
 
         <div className=" flex-1">
-          <motion.h1 variants={motionVariants} initial="rightInitial" whileInView="animate" className=" md:text-2xl text-xl lg:text-3xl font-bold pb-2">{title}</motion.h1>
-          <motion.p variants={motionVariants} initial="rightInitial" whileInView="animate" className=" text-xs md:text-sm text-gray-400 pb-3">{desc}</motion.p>
+          <motion.h1 variants={fadeIn("left", "tween", 0, 0.5)} initial="hidden" whileInView="show" className=" md:text-2xl text-xl lg:text-3xl font-bold pb-2">{title}</motion.h1>
+          <motion.p variants={fadeIn("left", "tween", 0, 0.5)} initial="hidden" whileInView="show" className=" text-xs md:text-sm text-gray-400 pb-3">{desc}</motion.p>
           <a href={link} target="_blank">
-          <motion.button variants={motionVariants} initial="rightInitial" whileInView="animate"
+          <motion.button variants={fadeIn("left", "tween", 0, 0)} initial="hidden" whileInView="show"
             type="button"
-            className="text-white bg-softTheme duration-300 hover:text-white hover:bg-theme font-medium rounded-lg text-sm md:text-base px-3 md:px-5 py-2.5 text-center me-2 mb-2 flex justify-center items-center gap-2 "
+            className="text-white bg-softTheme duration-300 lg:w-auto hover:text-white hover:bg-theme font-medium rounded-lg text-sm md:text-base px-3 md:px-5 py-2.5 text-center me-2 mb-2 flex justify-center items-center gap-2 "
           >
             See Demo
           </motion.button>
@@ -93,17 +93,16 @@ const Portfolio = () => {
     damping: 30,
   });
 
-  const { motionVariants } = useMotion();
 
   return (
     <div ref={ref} id="portfolio" className="relative"> 
       <div className="sticky top-5 z-10">
-        <motion.h1 variants={motionVariants} initial="upInitial" whileInView="animate" className=" pb-2 text-center md:text-3xl text-2xl lg:text-4xl font-bold">Featured Works</motion.h1>
+        <motion.h1 variants={fadeIn("up", "tween", 0, 0.2)} initial="hidden" whileInView="show" className=" pb-2 text-center md:text-3xl text-2xl lg:text-4xl font-bold">Featured Works</motion.h1>
 
         <motion.div
           className=" rounded-lg text-center bg-white h-1 md:h-2"
           style={{ scaleX }}
-          variants={motionVariants} initial="upInitial" whileInView="animate"
+          variants={fadeIn("up", "tween", 0, 0.2)} initial="hidden" whileInView="show"
         ></motion.div>
       </div>
       {featuredWorks.map((works) => {
